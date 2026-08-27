@@ -57,7 +57,7 @@ class TestTextNodeToHTMLNode(unittest.TestCase):
         self.assertEqual(html_node.tag, "a")
         self.assertEqual(html_node.value, "This is a link text node")
         self.assertEqual(html_node.props_to_html(), ' href="https://www.boot.dev"')
-    
+
     def test_image(self):
         node = TextNode("This is an image text node", TextType.IMAGE, "https://placehold.co/400")
         html_node = text_node_to_html_node(node)
